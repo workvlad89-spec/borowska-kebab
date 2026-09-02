@@ -1,654 +1,319 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap');
-
-:root {
-    --black: #0c0c0c;
-    --dark: #151515;
-    --red: #e52b18;
-    --cream: #f3efe7;
-    --white: #fff;
-    --gray: #777;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Inter, sans-serif;
-    background: var(--cream);
-    color: var(--black);
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    font-family: inherit;
-}
-
-.container {
-    width: min(1180px, 92%);
-    margin: auto;
-}
-
-
-/* HEADER */
-
-.header {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 20;
-    color: white;
-    padding: 25px 0;
-}
-
-.nav-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: Anton, sans-serif;
-    font-size: 26px;
-    line-height: .75;
-    letter-spacing: -1px;
-}
-
-.logo span {
-    display: block;
-    font-size: 11px;
-    color: var(--red);
-    letter-spacing: 4px;
-    margin-bottom: 5px;
-}
-
-nav {
-    display: flex;
-    gap: 35px;
-    font-size: 12px;
-    font-weight: 800;
-}
-
-nav a:hover {
-    color: var(--red);
-}
-
-.nav-order {
-    background: var(--red);
-    padding: 14px 20px;
-    font-size: 11px;
-    font-weight: 900;
-}
-
-
-/* HERO */
-
-.hero {
-    min-height: 850px;
-    background: #101010;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.95) 0%,
-            rgba(0,0,0,.82) 42%,
-            rgba(0,0,0,.25) 100%
-        );
-    z-index: 2;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 5;
-    padding-top: 100px;
-}
-
-.hero-rating {
-    font-weight: 800;
-    margin-bottom: 25px;
-}
-
-.hero-rating span {
-    color: #ffb400;
-}
-
-.hero-rating small {
-    color: #aaa;
-    font-weight: 400;
-    margin-left: 8px;
-}
-
-.hero h1 {
-    font-family: Anton, sans-serif;
-    font-size: clamp(70px, 9vw, 130px);
-    line-height: .85;
-    letter-spacing: -2px;
-    max-width: 700px;
-}
-
-.hero h1 em {
-    color: var(--red);
-    font-style: normal;
-}
-
-.hero p {
-    max-width: 460px;
-    color: #ccc;
-    font-size: 18px;
-    margin: 35px 0;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 12px;
-}
-
-.btn {
-    min-height: 55px;
-    padding: 0 28px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: .5px;
-    transition: .25s;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-.btn.red {
-    background: var(--red);
-    color: white;
-}
-
-.btn.outline {
-    border: 1px solid rgba(255,255,255,.4);
-    color: white;
-}
-
-.btn.outline:hover {
-    background: white;
-    color: black;
-}
-
-.btn.dark {
-    background: var(--black);
-    color: white;
-}
-
-.hero-food {
-    position: absolute;
-    width: 62%;
-    height: 100%;
-    right: -8%;
-    top: 0;
-}
-
-.hero-food img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-
-/* QUICK INFO */
-
-.quick-info {
-    background: var(--red);
-    color: white;
-}
-
-.quick-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
-
-.quick-grid div {
-    padding: 28px 20px;
-    border-right: 1px solid rgba(255,255,255,.25);
-}
-
-.quick-grid strong {
-    display: block;
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.quick-grid span {
-    font-size: 11px;
-    opacity: .8;
-}
-
-
-/* MENU */
-
-.menu-section {
-    padding: 120px 0;
-}
-
-.section-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    margin-bottom: 50px;
-}
-
-.eyebrow {
-    color: var(--red);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.section-top h2,
-.about h2,
-.reviews h2,
-.contact h2 {
-    font-family: Anton, sans-serif;
-    font-size: clamp(50px, 6vw, 80px);
-    line-height: .9;
-    margin-top: 10px;
-}
-
-.section-top p {
-    max-width: 350px;
-    color: var(--gray);
-}
-
-.categories {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 25px;
-    margin-bottom: 20px;
-}
-
-.category {
-    border: 1px solid #d4d0c8;
-    background: transparent;
-    padding: 13px 20px;
-    font-size: 10px;
-    font-weight: 900;
-    white-space: nowrap;
-    cursor: pointer;
-}
-
-.category.active,
-.category:hover {
-    background: var(--black);
-    color: white;
-    border-color: var(--black);
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.menu-card {
-    background: white;
-    overflow: hidden;
-    transition: .25s;
-}
-
-.menu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,.1);
-}
-
-.menu-image {
-    height: 250px;
-    overflow: hidden;
-}
-
-.menu-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .5s;
-}
-
-.menu-card:hover img {
-    transform: scale(1.05);
-}
-
-.menu-info {
-    padding: 22px;
-}
-
-.menu-info h3 {
-    font-size: 21px;
-    margin-bottom: 7px;
-}
-
-.menu-info p {
-    font-size: 13px;
-    color: var(--gray);
-    min-height: 40px;
-}
-
-.menu-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 18px;
-}
-
-.menu-price {
-    font-size: 21px;
-    font-weight: 900;
-}
-
-.menu-order {
-    color: var(--red);
-    font-size: 10px;
-    font-weight: 900;
-}
-
-
-/* VISUAL */
-
-.visual-section {
-    background: var(--black);
-    color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.visual-image {
-    min-height: 650px;
-}
-
-.visual-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.visual-text {
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.visual-text h2 {
-    font-family: Anton, sans-serif;
-    font-size: clamp(50px, 6vw, 80px);
-    line-height: .9;
-    margin: 15px 0 25px;
-}
-
-.visual-text p {
-    color: #aaa;
-    max-width: 420px;
-    margin-bottom: 25px;
-}
-
-
-/* ABOUT */
-
-.about {
-    padding: 130px 0;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-}
-
-.about-copy {
-    padding-top: 50px;
-}
-
-.about-copy > p {
-    font-size: 18px;
-    color: var(--gray);
-    max-width: 450px;
-}
-
-.about-points {
-    margin-top: 50px;
-}
-
-.about-points div {
-    display: flex;
-    gap: 30px;
-    padding: 20px 0;
-    border-bottom: 1px solid #d7d2c9;
-}
-
-.about-points strong {
-    color: var(--red);
-}
-
-.about-points span {
-    font-weight: 700;
-}
-
-
-/* REVIEWS */
-
-.reviews {
-    background: white;
-    text-align: center;
-    padding: 130px 0;
-}
-
-.reviews h2 {
-    margin-bottom: 50px;
-}
-
-.review-score {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 35px;
-}
-
-.review-score strong {
-    font-family: Anton, sans-serif;
-    font-size: 100px;
-    line-height: 1;
-}
-
-.stars {
-    color: #ffb400;
-    letter-spacing: 4px;
-    font-size: 25px;
-}
-
-.review-score p {
-    color: var(--gray);
-    font-size: 13px;
-}
-
-
-/* CONTACT */
-
-.contact {
-    padding: 120px 0;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-}
-
-.contact h2 {
-    margin-bottom: 30px;
-}
-
-.contact p {
-    color: var(--gray);
-    margin-bottom: 8px;
-}
-
-.contact-card {
-    background: var(--black);
-    color: white;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.contact-card > span {
-    color: var(--red);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.contact-card h3 {
-    font-family: Anton, sans-serif;
-    font-size: 70px;
-    line-height: .85;
-    margin: 15px 0 35px;
-}
-
-
-/* FOOTER */
-
-footer {
-    background: var(--black);
-    color: white;
-    padding: 35px 0;
-}
-
-.footer-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-inner p {
-    color: #777;
-    font-size: 11px;
-}
-
-
-/* MOBILE */
-
-@media(max-width:800px) {
-
-    .header {
-        padding: 18px 0;
+const orderLink =
+    "https://food.bolt.eu/en/344-wroclaw/p/3142492-borowska-kebab/";
+
+
+const menu = [
+
+    /* =========================
+       KEBAB
+    ========================= */
+
+    {
+        category: "kebab",
+        name: "Tortilla",
+        description: "Mięso, surówka, sos",
+        price: "26 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/4327a7e6-c365-4597-8f49-1ad8f8c671c7.jpeg"
+    },
+
+    {
+        category: "kebab",
+        name: "Knysza",
+        description: "Mięso, surówka, sos",
+        price: "34 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/cca55813-86a8-46f2-a190-227b88255fd5.jpeg"
+    },
+
+    {
+        category: "kebab",
+        name: "Rollo amerykańskie",
+        description: "Mięso, frytki, ser, sos",
+        price: "28 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/ca9ba588-2ff7-472b-bd3c-42f0aed09e95.jpeg"
+    },
+
+    {
+        category: "kebab",
+        name: "Zestaw kebab",
+        description: "Mięso, surówka, frytki, sos",
+        price: "34 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/59850002-0e68-4787-8e23-0ced66dfda73.jpeg"
+    },
+
+    {
+        category: "kebab",
+        name: "Kapsalon",
+        description: "Mięso, frytki, ser, surówki, sos",
+        price: "37 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/5bde6b7d-18ba-483b-8268-50d199fd6403.jpeg"
+    },
+
+    {
+        category: "kebab",
+        name: "Zestaw nuggets",
+        description: "Nuggets, frytki, surówka, sos",
+        price: "35 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/3bd0b2b1-ca6a-4086-8fa5-d253a5d693f2.jpeg"
+    },
+
+    {
+        category: "kebab",
+        name: "Fryto bułka z serem",
+        description: "Mięso, frytki, sos",
+        price: "38 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/e4399a9e-1dc1-413c-a468-3686f42fdef6.jpeg"
+    },
+
+
+    /* =========================
+       WEGETARIAŃSKIE
+    ========================= */
+
+    {
+        category: "vegetarian",
+        name: "Knysza falafel",
+        description: "Falafel, surówka, sos",
+        price: "32 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/a92ceadb-b8ab-447b-b1de-acc9f83daf2a.jpeg"
+    },
+
+    {
+        category: "vegetarian",
+        name: "Tortilla falafel",
+        description: "Falafel, surówka, sos",
+        price: "31 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/59dbb515-1f14-42f9-a43f-091641da09fc.jpeg"
+    },
+
+    {
+        category: "vegetarian",
+        name: "Zestaw falafel",
+        description: "Falafel, hummus lub frytki, surówka, sos",
+        price: "36 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/0a00961f-82a0-46dd-9e33-8933fcaa0f86.jpeg"
+    },
+
+    {
+        category: "vegetarian",
+        name: "Zestaw smażony ser",
+        description: "Ser, frytki, sos",
+        price: "32 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/e50d4f2c-4f08-4690-b6f9-af485c969726.jpeg"
+    },
+
+    {
+        category: "vegetarian",
+        name: "Zestaw filet mintaja",
+        description: "Filet mintaja, frytki, sos",
+        price: "36 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/b185f033-7c07-44dd-9bfa-bde6e9bc90b2.jpeg"
+    },
+
+
+    /* =========================
+       BOXY
+    ========================= */
+
+    {
+        category: "boxes",
+        name: "Box kebab",
+        description: "Mięso, frytki, sos",
+        price: "29 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/120a0967-2665-4438-bfa2-cabaa6bdd6ff.jpeg"
+    },
+
+    {
+        category: "boxes",
+        name: "Box nuggets",
+        description: "Nuggets, frytki, sos",
+        price: "28 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/e93efee0-9318-466f-8656-b8fd43ece4c1.jpeg"
+    },
+
+
+    /* =========================
+       SAŁATKI
+    ========================= */
+
+    {
+        category: "salads",
+        name: "Sałatka grecka",
+        description: "Mix sałat, oliwki, ser feta",
+        price: "28 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/927cdbf1-1953-4aa2-9c03-de17ab6d70a9.jpeg"
+    },
+
+    {
+        category: "salads",
+        name: "Sałatka z mięsem",
+        description: "Mix sałat, mięso, sos",
+        price: "36 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/60b1486b-e45d-4c3a-9fdb-50a6c9fbad6e.jpeg"
+    },
+
+
+    /* =========================
+       DODATKI
+    ========================= */
+
+    {
+        category: "sides",
+        name: "Sos",
+        description: "Dodatkowa porcja sosu",
+        price: "4 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/5cf3c818-aaa5-4d38-8fef-e46943126e7d.jpeg"
+    },
+
+    {
+        category: "sides",
+        name: "Frytki",
+        description: "Dodatkowa porcja frytek",
+        price: "15 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/dcd0e5ee-aea5-4248-81f1-4aaf0654abf8.jpeg"
+    },
+
+    {
+        category: "sides",
+        name: "Falafel",
+        description: "Dodatkowa porcja falafela",
+        price: "4 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/345905f8-427d-42b9-b0e0-738e91dfab21.jpeg"
+    },
+
+
+    /* =========================
+       NAPOJE
+    ========================= */
+
+    {
+        category: "drinks",
+        name: "Woda niegazowana",
+        description: "Do wyboru rozmiar",
+        price: "4 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/e9cc72d7-e54f-4f36-953d-e67e347e3c66.jpeg"
+    },
+
+    {
+        category: "drinks",
+        name: "Woda gazowana",
+        description: "Do wyboru rozmiar",
+        price: "4 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/be691651-6490-4b6a-bd13-324cc4596b93.jpeg"
+    },
+
+    {
+        category: "drinks",
+        name: "Ayran",
+        description: "0,33 l",
+        price: "9 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/1f8bdd94-a817-4b07-a31f-c8442d3a8e73.jpeg"
+    },
+
+    {
+        category: "drinks",
+        name: "Coca-Cola",
+        description: "Do wyboru rozmiar",
+        price: "9 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/e79b2589-447b-46f6-bf18-a17545edca0c.jpeg"
+    },
+
+    {
+        category: "drinks",
+        name: "Pepsi",
+        description: "Do wyboru rozmiar",
+        price: "9 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/7e750e94-21f1-4562-897c-5110292128e1.jpeg"
+    },
+
+    {
+        category: "drinks",
+        name: "Mirinda",
+        description: "Do wyboru rozmiar",
+        price: "9 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/535a299e-d0e3-4dce-94ea-6666db1d16ee.jpeg"
+    },
+
+    {
+        category: "drinks",
+        name: "Sok mango",
+        description: "0,33 l",
+        price: "10 zł",
+        image: "https://images.bolt.eu/store/2026/2026-08-28/6216ed1c-1388-4fcc-a041-cb8e022fc21f.jpeg"
     }
 
-    nav {
-        display: none;
-    }
+];
 
-    .hero {
-        min-height: 760px;
-        align-items: end;
-    }
 
-    .hero-content {
-        padding-bottom: 70px;
-    }
+const menuGrid = document.getElementById("menuGrid");
+const categoryButtons = document.querySelectorAll(".category");
 
-    .hero-food {
-        width: 100%;
-        height: 55%;
-        right: 0;
-        top: 0;
-    }
 
-    .hero-overlay {
-        background:
-            linear-gradient(
-                180deg,
-                rgba(0,0,0,.2),
-                rgba(0,0,0,.95) 72%
-            );
-    }
+function renderMenu(category) {
 
-    .hero h1 {
-        font-size: 70px;
-    }
+    const items = menu.filter(
+        item => item.category === category
+    );
 
-    .hero p {
-        font-size: 15px;
-    }
+    menuGrid.innerHTML = "";
 
-    .quick-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
+    items.forEach(item => {
 
-    .quick-grid div {
-        border-bottom: 1px solid rgba(255,255,255,.2);
-    }
+        menuGrid.innerHTML += `
+            <article class="menu-card">
 
-    .section-top {
-        display: block;
-    }
+                <div class="menu-image">
+                    <img
+                        src="${item.image}"
+                        alt="${item.name}"
+                        loading="lazy"
+                    >
+                </div>
 
-    .section-top p {
-        margin-top: 25px;
-    }
+                <div class="menu-info">
 
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
+                    <h3>${item.name}</h3>
 
-    .visual-section {
-        grid-template-columns: 1fr;
-    }
+                    <p>${item.description}</p>
 
-    .visual-image {
-        min-height: 400px;
-    }
+                    <div class="menu-bottom">
 
-    .visual-text {
-        padding: 70px 6%;
-    }
+                        <span class="menu-price">
+                            ${item.price}
+                        </span>
 
-    .about-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+                        <a
+                            href="${orderLink}"
+                            target="_blank"
+                            rel="noopener"
+                            class="menu-order">
+                            ZAMÓW →
+                        </a>
 
-    .about-copy {
-        padding-top: 0;
-    }
+                    </div>
 
-    .contact-card {
-        padding: 50px 30px;
-    }
+                </div>
 
-    .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
+            </article>
+        `;
+    });
 }
+
+
+categoryButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        categoryButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        renderMenu(button.dataset.category);
+
+    });
+
+});
+
+
+renderMenu("kebab");
