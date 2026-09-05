@@ -907,6 +907,19 @@ header{
   display:block;
   filter:drop-shadow(0 14px 30px rgba(0,0,0,.5));
 }
+.site-preloader-fallback{
+  display:none;
+  font-family:'Oswald',sans-serif;
+  font-weight:700;
+  font-size:clamp(1.6rem, 6vw, 2.6rem);
+  letter-spacing:0.03em;
+  text-transform:uppercase;
+  color:var(--cream);
+  text-align:center;
+}
+.site-preloader-fallback span{color:var(--gold);}
+.site-preloader-logo img.broken{display:none;}
+.site-preloader-logo img.broken + .site-preloader-fallback{display:block;}
 @keyframes preloaderPulse{
   0%, 100%{ transform:scale(1); opacity:1; }
   50%{ transform:scale(1.05); opacity:0.9; }
@@ -1036,7 +1049,10 @@ body.preloading{ overflow:hidden; height:100vh; }
 </head>
 <body class="preloading">
 <div class="site-preloader" id="sitePreloader">
-<div class="site-preloader-logo"><img src="image/logo1.jpg" alt="Borowska Kebab"></div>
+<div class="site-preloader-logo">
+<img src="image/logo1.jpg" alt="Borowska Kebab" onerror="this.classList.add('broken')">
+<div class="site-preloader-fallback">BOROWSKA <span>KEBAB</span></div>
+</div>
 </div>
 <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
 <header>
