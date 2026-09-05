@@ -633,11 +633,14 @@ img {
 #about .story-visual {
     overflow: hidden;
     background: #181818;
+    padding: 12px;
+    box-sizing: border-box;
 }
 
 #about .story-visual img {
     object-fit: contain !important;
     object-position: center;
+    display: block;
 }
 
 
@@ -676,6 +679,8 @@ img {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     #about .story-visual img,
@@ -703,6 +708,8 @@ img {
         height: auto;
         aspect-ratio: auto;
         min-height: 0;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     #about .story-visual img,
