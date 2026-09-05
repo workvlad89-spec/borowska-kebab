@@ -651,11 +651,14 @@ img {
 #promo .promo-visual {
     overflow: hidden;
     background: #181818;
+    padding: 12px;
+    box-sizing: border-box;
 }
 
 #promo .promo-visual img {
     object-fit: contain !important;
     object-position: center;
+    display: block;
 }
 
 
