@@ -91,7 +91,6 @@ width:100%;
 img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 
-/* Скрываем контент на долю секунды, пока не применится сохранённый английский перевод — чтобы не мелькал польский текст */
 html[data-lang-pending] body{ visibility:hidden; }
 
 h1,h2,h3,h4{
@@ -102,7 +101,6 @@ letter-spacing:0.01em;
 }
 .wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
 section{position:relative;}
-/* ---------- Header ---------- */
 header{
 position:sticky; top:0; z-index:50;
 background:rgba(28,24,21,0.94);
@@ -166,7 +164,6 @@ font-size:1.5rem; cursor:pointer;
 line-height:1;
 padding:4px;
 }
-/* ---------- Hero ---------- */
 .hero{
 background:var(--ink);
 color:var(--cream);
@@ -246,7 +243,6 @@ border-radius:var(--radius);
 font-size:0.85rem;
 }
 .hero-tag b{color:var(--gold); font-weight:600;}
-/* ---------- Section heading pattern ---------- */
 .section-head{
 max-width:640px;
 margin-bottom:52px;
@@ -267,7 +263,6 @@ color:var(--cream);
 opacity:0.7;
 max-width:52ch;
 }
-/* ---------- Promo banner ---------- */
 .promo{
 padding:64px 0;
 background:var(--ink-soft);
@@ -311,7 +306,6 @@ color:var(--cream);
 opacity:0.75;
 max-width:52ch;
 }
-/* ---------- Menu ---------- */
 .menu{
 padding:96px 0;
 background:var(--ink);
@@ -374,7 +368,6 @@ opacity:0.6;
 .dish--simple{
 grid-template-columns:1fr;
 }
-/* ---------- Story / CTA band ---------- */
 .story{
 background:var(--ink);
 color:var(--cream);
@@ -396,7 +389,6 @@ aspect-ratio:1/1;
 }
 .story-visual img{width:100%; height:100%; object-fit:cover;}
 
-/* Для картинок-графики с текстом (напр. "MIĘSA") — не обрезаем, вписываем целиком */
 .story-visual--contain{
 background:var(--ink-soft);
 display:flex;
@@ -430,7 +422,6 @@ margin-bottom:6px;
 font-size:0.98rem;
 }
 .story .hero-actions{margin-top:32px;}
-/* ---------- Contact ---------- */
 .contact{
 padding:96px 0;
 background:var(--ink-soft);
@@ -478,7 +469,6 @@ border:1px solid var(--line);
 aspect-ratio:4/3;
 }
 .map-frame iframe{width:100%; height:100%; border:0; display:block;}
-/* ---------- Footer ---------- */
 footer{
 background:var(--ink);
 color:rgba(247,242,234,0.6);
@@ -494,7 +484,6 @@ font-size:0.88rem;
 }
 .footer-row .brand{font-size:1rem;}
 .footer-row a{color:var(--gold); font-weight:600;}
-/* ---------- Responsive ---------- */
 @media (max-width:860px){
 .hero-grid{grid-template-columns:1fr; gap:40px;}
 .hero-visual{aspect-ratio:16/10; order:-1;}
@@ -557,10 +546,6 @@ html{scroll-behavior:auto;}
 outline:2px solid var(--gold);
 outline-offset:2px;
 }
-
-/* =========================================================
-   BOROWSKA KEBAB — ANIMATIONS PACK
-   ========================================================= */
 
 :root{
   --ease-out: cubic-bezier(.16,1,.3,1);
@@ -847,7 +832,6 @@ header{
   .scroll-top-btn{ right:14px; bottom:14px; width:44px; height:44px; }
 }
 
-/* ===== ПЕРЕХОД МЕЖДУ СЕКЦИЯМИ (как переход между "страничками") ===== */
 .page-transition-overlay{
   position:fixed;
   inset:0;
@@ -881,7 +865,6 @@ header{
   .page-transition-overlay{ display:none !important; }
 }
 
-/* ===== ПРЕЛОАДЕР С ЛОГОТИПОМ ПРИ ВХОДЕ НА САЙТ ===== */
 .site-preloader{
   position:fixed;
   inset:0;
@@ -925,7 +908,6 @@ header{
   50%{ transform:scale(1.05); opacity:0.9; }
 }
 
-/* блокируем скролл, пока прелоадер на экране */
 body.preloading{ overflow:hidden; height:100vh; }
 
 @media (prefers-reduced-motion:reduce){
@@ -933,7 +915,6 @@ body.preloading{ overflow:hidden; height:100vh; }
   .site-preloader-logo{ animation:none; }
 }
 
-/* ===== ВНЕЗАПНОЕ ("pop") ПОЯВЛЕНИЕ КАРТИНОК С ЗАДЕРЖКОЙ ===== */
 [data-reveal="pop"]{
   opacity:0;
   transform:scale(.8);
@@ -945,7 +926,6 @@ body.preloading{ overflow:hidden; height:100vh; }
   transition:opacity .25s ease, transform .5s var(--ease-back);
 }
 
-/* ===== INGREDIENT HOVER CARD ===== */
 .dish{ position:relative; cursor:pointer; }
 
 .dish-ingredients{
@@ -1206,27 +1186,27 @@ body.preloading{ overflow:hidden; height:100vh; }
 <div class="category">
 <div class="category-title">
 <h3 data-i18n="cat.kebab">Kebab</h3>
-<span class="category-count" data-i18n="cat.kebab_count">7 pozycji</span>
+<span class="category-count" data-i18n="cat.kebab_count">8 pozycji</span>
 </div>
 <div class="dish-list">
 <div class="dish">
 <div class="dish-thumb"><img src="image/1tortilla.jpg" alt="Tortilla kebab"></div>
-<div class="dish-info"><h4 data-i18n="dish.tortilla.name">Tortilla</h4><p data-i18n="dish.tortilla.desc">Mięso, surówka, sos.</p></div>
+<div class="dish-info"><h4 data-i18n="dish.tortilla.name">Tortilla Kebab</h4><p data-i18n="dish.tortilla.desc">Mięso, surówka, sos.</p></div>
 </div>
 <div class="dish">
-<div class="dish-thumb"><img src="image/BOROWSKA-KEBAB_CloseUp.jpg" alt="Knysza kebab"></div>
+<div class="dish-thumb"><img src="image/knysha.jpg" alt="Knysza kebab"></div>
 <div class="dish-info"><h4 data-i18n="dish.knysza.name">Knysza</h4><p data-i18n="dish.knysza.desc">Mięso, surówka, sos.</p></div>
 </div>
 <div class="dish">
-<div class="dish-thumb"><img src="image/frytotortilla.jpg" alt="American Rollo"></div>
-<div class="dish-info"><h4 data-i18n="dish.rollo.name">American Rollo</h4><p data-i18n="dish.rollo.desc">Mięso, frytki, ser, sos.</p></div>
+<div class="dish-thumb"><img src="image/frytotortilla.jpg" alt="Rolla amerykańskie"></div>
+<div class="dish-info"><h4 data-i18n="dish.rollo.name">Rolla Amerykańskie</h4><p data-i18n="dish.rollo.desc">Mięso, frytki, ser, sos.</p></div>
 </div>
 <div class="dish">
 <div class="dish-thumb"><img src="image/zestaw-kebab-mieszane.jpg" alt="Zestaw Kebab"></div>
 <div class="dish-info"><h4 data-i18n="dish.zestawkebab.name">Zestaw Kebab</h4><p data-i18n="dish.zestawkebab.desc">Mięso, surówka, frytki, sos.</p></div>
 </div>
 <div class="dish">
-<div class="dish-thumb"><img src="image/kapsalon.jpg" alt="Kapsalon"></div>
+<div class="dish-thumb"><img src="image/kapsalon.jpg" alt="Kapsalon kebab"></div>
 <div class="dish-info"><h4 data-i18n="dish.kapsalon.name">Kapsalon</h4><p data-i18n="dish.kapsalon.desc">Mięso, frytki, ser, surówki, sos.</p></div>
 </div>
 <div class="dish">
@@ -1234,8 +1214,12 @@ body.preloading{ overflow:hidden; height:100vh; }
 <div class="dish-info"><h4 data-i18n="dish.nuggets.name">Zestaw Nuggets</h4><p data-i18n="dish.nuggets.desc">Nuggetsy, frytki, surówka, sos.</p></div>
 </div>
 <div class="dish">
-<div class="dish-thumb"><img src="image/bulka.jpg" alt="Fry bułka z serem"></div>
-<div class="dish-info"><h4 data-i18n="dish.bulka.name">Fry Bułka z Serem</h4><p data-i18n="dish.bulka.desc">Mięso, frytki, ser, sos.</p></div>
+<div class="dish-thumb"><img src="image/bulka.jpg" alt="Bułka kebab"></div>
+<div class="dish-info"><h4 data-i18n="dish.bulka.name">Bułka Kebab</h4><p data-i18n="dish.bulka.desc">Mięso, ser, sos.</p></div>
+</div>
+<div class="dish">
+<div class="dish-thumb"><img src="image/kebab-box.jpg" alt="Box kebab"></div>
+<div class="dish-info"><h4 data-i18n="dish.kebabbox.name">Box Kebab</h4><p data-i18n="dish.kebabbox.desc">Mięso, frytki, sos.</p></div>
 </div>
 </div>
 </div>
@@ -1243,20 +1227,20 @@ body.preloading{ overflow:hidden; height:100vh; }
 <div class="category">
 <div class="category-title">
 <h3 data-i18n="cat.veg">Dania wegetariańskie</h3>
-<span class="category-count" data-i18n="cat.veg_count">5 pozycji</span>
+<span class="category-count" data-i18n="cat.veg_count">6 pozycji</span>
 </div>
 <div class="dish-list">
 <div class="dish">
-<div class="dish-thumb"><img src="image/falafel.jpg" alt="Falafel Knysza"></div>
-<div class="dish-info"><h4 data-i18n="dish.falafelknysza.name">Falafel Knysza</h4><p data-i18n="dish.falafelknysza.desc">Falafel, surówka, sos.</p></div>
-</div>
-<div class="dish">
-<div class="dish-thumb"><img src="image/falafel.jpg" alt="Falafel Tortilla"></div>
-<div class="dish-info"><h4 data-i18n="dish.falafeltortilla.name">Falafel Tortilla</h4><p data-i18n="dish.falafeltortilla.desc">Falafel, surówka, sos.</p></div>
+<div class="dish-thumb"><img src="image/falafel.jpg" alt="Tortilla falafel"></div>
+<div class="dish-info"><h4 data-i18n="dish.falafeltortilla.name">Tortilla Falafel</h4><p data-i18n="dish.falafeltortilla.desc">Falafel, surówka, sos.</p></div>
 </div>
 <div class="dish">
 <div class="dish-thumb"><img src="image/zestaw-falafel.jpg" alt="Zestaw Falafel"></div>
 <div class="dish-info"><h4 data-i18n="dish.zestawfalafel.name">Zestaw Falafel</h4><p data-i18n="dish.zestawfalafel.desc">Falafel, hummus lub frytki, surówka, sos.</p></div>
+</div>
+<div class="dish">
+<div class="dish-thumb"><img src="image/falafel.jpg" alt="Box falafel"></div>
+<div class="dish-info"><h4 data-i18n="dish.falafelbox.name">Box Falafel</h4><p data-i18n="dish.falafelbox.desc">Falafel, frytki, sos.</p></div>
 </div>
 <div class="dish">
 <div class="dish-thumb"><img src="image/BOROWSKA-KEBAB_CloseUp.jpg" alt="Zestaw Smażony Ser"></div>
@@ -1266,35 +1250,22 @@ body.preloading{ overflow:hidden; height:100vh; }
 <div class="dish-thumb"><img src="image/BOROWSKA-KEBAB_CloseUp.jpg" alt="Zestaw Filet Mintaja"></div>
 <div class="dish-info"><h4 data-i18n="dish.mintaj.name">Zestaw Filet Mintaja</h4><p data-i18n="dish.mintaj.desc">Filet, frytki, sos.</p></div>
 </div>
+<div class="dish">
+<div class="dish-thumb"><img src="image/salatka-grecka.jpg" alt="Sałatka Grecka"></div>
+<div class="dish-info"><h4 data-i18n="dish.grecka.name">Sałatka Grecka</h4><p data-i18n="dish.grecka.desc">Mix sałat, oliwki, ser feta.</p></div>
+</div>
 </div>
 </div>
 
 <div class="category">
 <div class="category-title">
-<h3 data-i18n="cat.boxy">Boxy</h3>
+<h3 data-i18n="cat.boxy">Boxy i Sałatki</h3>
 <span class="category-count" data-i18n="cat.boxy_count">2 pozycje</span>
 </div>
 <div class="dish-list">
 <div class="dish">
-<div class="dish-thumb"><img src="image/kebab-box.jpg" alt="Kebab Box"></div>
-<div class="dish-info"><h4 data-i18n="dish.kebabbox.name">Kebab Box</h4><p data-i18n="dish.kebabbox.desc">Mięso, frytki, sos.</p></div>
-</div>
-<div class="dish">
 <div class="dish-thumb"><img src="image/zestaw-nuggets.jpg" alt="Nuggets Box"></div>
 <div class="dish-info"><h4 data-i18n="dish.nuggetsbox.name">Nuggets Box</h4><p data-i18n="dish.nuggetsbox.desc">Nuggetsy, frytki, sos.</p></div>
-</div>
-</div>
-</div>
-
-<div class="category">
-<div class="category-title">
-<h3 data-i18n="cat.salatki">Sałatki</h3>
-<span class="category-count" data-i18n="cat.salatki_count">2 pozycje</span>
-</div>
-<div class="dish-list">
-<div class="dish">
-<div class="dish-thumb"><img src="image/salatka-grecka.jpg" alt="Sałatka Grecka"></div>
-<div class="dish-info"><h4 data-i18n="dish.grecka.name">Sałatka Grecka</h4><p data-i18n="dish.grecka.desc">Mix sałat, oliwki, ser feta.</p></div>
 </div>
 <div class="dish">
 <div class="dish-thumb"><img src="image/salatka-z-miesem.jpg" alt="Sałatka z Mięsem"></div>
@@ -1306,20 +1277,53 @@ body.preloading{ overflow:hidden; height:100vh; }
 <div class="category">
 <div class="category-title">
 <h3 data-i18n="cat.dodatki">Dodatki</h3>
-<span class="category-count" data-i18n="cat.dodatki_count">3 pozycje</span>
+<span class="category-count" data-i18n="cat.dodatki_count">1 pozycja</span>
 </div>
 <div class="dish-list">
 <div class="dish">
 <div class="dish-thumb"><img src="image/frytki.jpg" alt="Frytki"></div>
 <div class="dish-info"><h4 data-i18n="dish.frytki.name">Frytki</h4><p data-i18n="dish.frytki.desc">Dodatkowa porcja frytek.</p></div>
 </div>
+</div>
+</div>
+
+<div class="category">
+<div class="category-title">
+<h3 data-i18n="cat.sosy">Sosy</h3>
+<span class="category-count" data-i18n="cat.sosy_count">8 pozycji</span>
+</div>
+<div class="dish-list">
 <div class="dish">
-<div class="dish-thumb"><img src="image/sos-czosnkowy.jpg" alt="Sos"></div>
-<div class="dish-info"><h4 data-i18n="dish.sos.name">Sos</h4><p data-i18n="dish.sos.desc">Dodatkowa porcja sosu.</p></div>
+<div class="dish-thumb"><img src="image/sos-czosnkowy.jpg" alt="Sos czosnkowy"></div>
+<div class="dish-info"><h4 data-i18n="dish.sosczosnkowy.name">Sos Czosnkowy</h4></div>
 </div>
 <div class="dish">
-<div class="dish-thumb"><img src="image/falafel.jpg" alt="Falafel"></div>
-<div class="dish-info"><h4 data-i18n="dish.falafeldod.name">Falafel</h4><p data-i18n="dish.falafeldod.desc">Dodatkowa porcja falafela.</p></div>
+<div class="dish-thumb"><img src="image/sos-lagodny.jpg" alt="Sos łagodny"></div>
+<div class="dish-info"><h4 data-i18n="dish.soslagodny.name">Sos Łagodny</h4></div>
+</div>
+<div class="dish">
+<div class="dish-thumb"><img src="image/sos-ostry.jpg" alt="Sos ostry"></div>
+<div class="dish-info"><h4 data-i18n="dish.sosostry.name">Sos Ostry</h4></div>
+</div>
+<div class="dish">
+<div class="dish-thumb"><img src="image/sos-1000wysp.jpg" alt="Sos tysiąca wysp"></div>
+<div class="dish-info"><h4 data-i18n="dish.sostysiac.name">Sos Tysiąca Wysp</h4></div>
+</div>
+<div class="dish">
+<div class="dish-thumb"><img src="image/sos-serowy.jpg" alt="Sos serowy"></div>
+<div class="dish-info"><h4 data-i18n="dish.sosserowy.name">Sos Serowy</h4></div>
+</div>
+<div class="dish">
+<div class="dish-thumb"><img src="image/ketchup.jpg" alt="Sos keczup"></div>
+<div class="dish-info"><h4 data-i18n="dish.soskeczup.name">Sos Keczup</h4></div>
+</div>
+<div class="dish">
+<div class="dish-thumb"><img src="image/sos-extra-ostry.jpg" alt="Sos ekstra ostry"></div>
+<div class="dish-info"><h4 data-i18n="dish.sosekstra.name">Sos Ekstra Ostry</h4></div>
+</div>
+<div class="dish">
+<div class="dish-thumb"><img src="image/vinegret.jpg" alt="Sos Algiers"></div>
+<div class="dish-info"><h4 data-i18n="dish.sosalgiers.name">Sos Algiers</h4></div>
 </div>
 </div>
 </div>
@@ -1406,13 +1410,12 @@ body.preloading{ overflow:hidden; height:100vh; }
 </footer>
 
 <script>
-/* ---------- Прелоадер с логотипом (показывается 3 секунды) ---------- */
 (function(){
   const preloader = document.getElementById('sitePreloader');
   if(!preloader) return;
 
   const reduceMotionPreload = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const MIN_DURATION = reduceMotionPreload ? 0 : 1000; // 1 секунда, если анимации не отключены
+  const MIN_DURATION = reduceMotionPreload ? 0 : 1000;
   const start = Date.now();
 
   function hidePreloader(){
@@ -1445,9 +1448,8 @@ toggle.setAttribute('aria-expanded', 'false');
 toggle.textContent = '☰';
 }));
 
-/* ---------- Przełącznik języka PL / EN ---------- */
 const BK_I18N = {
-  pl: {}, // pl не нужен как словарь — это язык самой разметки (оригинал остаётся в HTML)
+  pl: {},
   en: {
     "nav.about": "About us",
     "nav.patio": "Chill Zone",
@@ -1509,19 +1511,21 @@ const BK_I18N = {
     "menu.subtitle": "Every item on the Borowska Kebab menu — from the classic tortilla to salads and drinks.",
 
     "cat.kebab": "Kebab",
-    "cat.kebab_count": "7 items",
+    "cat.kebab_count": "8 items",
     "cat.veg": "Vegetarian dishes",
-    "cat.veg_count": "5 items",
-    "cat.boxy": "Boxes",
+    "cat.veg_count": "6 items",
+    "cat.boxy": "Boxes & Salads",
     "cat.boxy_count": "2 items",
     "cat.salatki": "Salads",
     "cat.salatki_count": "2 items",
     "cat.dodatki": "Extras",
-    "cat.dodatki_count": "3 items",
+    "cat.dodatki_count": "1 item",
+    "cat.sosy": "Sauces",
+    "cat.sosy_count": "8 items",
     "cat.napoje": "Drinks",
     "cat.napoje_count": "7 items",
 
-    "dish.tortilla.name": "Tortilla",
+    "dish.tortilla.name": "Tortilla Kebab",
     "dish.tortilla.desc": "Meat, coleslaw, sauce.",
     "dish.knysza.name": "Knysza",
     "dish.knysza.desc": "Meat, coleslaw, sauce.",
@@ -1533,36 +1537,40 @@ const BK_I18N = {
     "dish.kapsalon.desc": "Meat, fries, cheese, coleslaw, sauce.",
     "dish.nuggets.name": "Nuggets Set",
     "dish.nuggets.desc": "Nuggets, fries, coleslaw, sauce.",
-    "dish.bulka.name": "Fried Roll with Cheese",
-    "dish.bulka.desc": "Meat, fries, cheese, sauce.",
+    "dish.bulka.name": "Kebab Roll",
+    "dish.bulka.desc": "Meat, cheese, sauce.",
+    "dish.kebabbox.name": "Kebab Box",
+    "dish.kebabbox.desc": "Meat, fries, sauce.",
 
-    "dish.falafelknysza.name": "Falafel Knysza",
-    "dish.falafelknysza.desc": "Falafel, coleslaw, sauce.",
     "dish.falafeltortilla.name": "Falafel Tortilla",
     "dish.falafeltortilla.desc": "Falafel, coleslaw, sauce.",
     "dish.zestawfalafel.name": "Falafel Set",
     "dish.zestawfalafel.desc": "Falafel, hummus or fries, coleslaw, sauce.",
+    "dish.falafelbox.name": "Falafel Box",
+    "dish.falafelbox.desc": "Falafel, fries, sauce.",
     "dish.ser.name": "Fried Cheese Set",
     "dish.ser.desc": "Cheese, fries, sauce.",
     "dish.mintaj.name": "Pollock Fillet Set",
     "dish.mintaj.desc": "Fillet, fries, sauce.",
-
-    "dish.kebabbox.name": "Kebab Box",
-    "dish.kebabbox.desc": "Meat, fries, sauce.",
-    "dish.nuggetsbox.name": "Nuggets Box",
-    "dish.nuggetsbox.desc": "Nuggets, fries, sauce.",
-
     "dish.grecka.name": "Greek Salad",
     "dish.grecka.desc": "Mixed greens, olives, feta cheese.",
+
+    "dish.nuggetsbox.name": "Nuggets Box",
+    "dish.nuggetsbox.desc": "Nuggets, fries, sauce.",
     "dish.zmiesem.name": "Salad with Meat",
     "dish.zmiesem.desc": "Mixed greens, meat, sauce.",
 
     "dish.frytki.name": "Fries",
     "dish.frytki.desc": "Extra portion of fries.",
-    "dish.sos.name": "Sauce",
-    "dish.sos.desc": "Extra portion of sauce.",
-    "dish.falafeldod.name": "Falafel",
-    "dish.falafeldod.desc": "Extra portion of falafel.",
+
+    "dish.sosczosnkowy.name": "Garlic Sauce",
+    "dish.soslagodny.name": "Mild Sauce",
+    "dish.sosostry.name": "Hot Sauce",
+    "dish.sostysiac.name": "Thousand Island Sauce",
+    "dish.sosserowy.name": "Cheese Sauce",
+    "dish.soskeczup.name": "Ketchup",
+    "dish.sosekstra.name": "Extra Hot Sauce",
+    "dish.sosalgiers.name": "Algiers Sauce",
 
     "dish.woda1.name": "Still Water",
     "dish.woda2.name": "Sparkling Water",
@@ -1646,9 +1654,6 @@ const BK_I18N = {
   if(langMobile) langMobile.addEventListener('click', toggleLang);
 })();
 
-/* =========================================================
-   BOROWSKA KEBAB — ANIMATIONS SCRIPT
-   ========================================================= */
 (function () {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -1699,7 +1704,6 @@ const BK_I18N = {
         if (entry.isIntersecting) {
           const el = entry.target;
           if (el.getAttribute('data-reveal') === 'pop') {
-            /* "внезапное" появление спустя 1–2 секунды после попадания в зону видимости */
             const delay = 1000 + Math.random() * 1000;
             setTimeout(() => el.classList.add('in-view'), delay);
           } else {
@@ -1820,7 +1824,6 @@ const BK_I18N = {
     const overlay = document.getElementById('pageTransitionOverlay');
     if (!overlay || reduceMotion) return;
 
-    /* переход только для ссылок на секции этой же страницы (#about, #menu и т.д.) */
     const internalLinks = document.querySelectorAll('a[href^="#"]');
 
     internalLinks.forEach(link => {
@@ -1878,21 +1881,21 @@ const BK_I18N = {
 
 (function(){
   const ingredientsMap = {
-    "Tortilla": ["Tortilla (lawasz)", "Mięso z rożna", "Świeże warzywa", "Sos na wybór"],
+    "Tortilla Kebab": ["Tortilla (lawasz)", "Mięso z rożna", "Świeże warzywa", "Sos na wybór"],
     "Knysza": ["Pieczywo knysza", "Mięso z rożna", "Świeże warzywa", "Sos na wybór"],
-    "American Rollo": ["Tortilla", "Mięso z rożna", "Frytki", "Ser", "Sos"],
+    "Rolla Amerykańskie": ["Tortilla", "Mięso z rożna", "Frytki", "Ser", "Sos"],
     "Zestaw Kebab": ["Mięso z rożna", "Świeże warzywa", "Frytki", "Sos"],
     "Kapsalon": ["Mięso z rożna", "Frytki", "Stopiony ser", "Surówki", "Sos"],
     "Zestaw Nuggets": ["Nuggetsy", "Frytki", "Surówka", "Sos"],
-    "Fry Bułka z Serem": ["Bułka", "Mięso z rożna", "Frytki", "Ser", "Sos"],
-    "Falafel Knysza": ["Pieczywo knysza", "Falafel", "Świeże warzywa", "Sos"],
-    "Falafel Tortilla": ["Tortilla", "Falafel", "Świeże warzywa", "Sos"],
+    "Bułka Kebab": ["Bułka", "Mięso z rożna", "Ser", "Sos"],
+    "Box Kebab": ["Mięso z rożna", "Frytki", "Sos"],
+    "Tortilla Falafel": ["Tortilla", "Falafel", "Świeże warzywa", "Sos"],
     "Zestaw Falafel": ["Falafel", "Hummus lub frytki", "Surówka", "Sos"],
+    "Box Falafel": ["Falafel", "Frytki", "Sos"],
     "Zestaw Smażony Ser": ["Smażony ser", "Frytki", "Sos"],
     "Zestaw Filet Mintaja": ["Filet z mintaja", "Frytki", "Sos"],
-    "Kebab Box": ["Mięso z rożna", "Frytki", "Sos"],
-    "Nuggets Box": ["Nuggetsy", "Frytki", "Sos"],
     "Sałatka Grecka": ["Mix sałat", "Oliwki", "Ser feta", "Pomidory, ogórki"],
+    "Nuggets Box": ["Nuggetsy", "Frytki", "Sos"],
     "Sałatka z Mięsem": ["Mix sałat", "Mięso z rożna", "Sos"]
   };
 
