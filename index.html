@@ -1415,24 +1415,18 @@ body.preloading{ overflow:hidden; height:100vh; }
   if(!preloader) return;
 
   const reduceMotionPreload = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const MIN_DURATION = reduceMotionPreload ? 0 : 1000;
-  const start = Date.now();
+  const DURATION = reduceMotionPreload ? 0 : 1000;
 
   function hidePreloader(){
-    const elapsed = Date.now() - start;
-    const remaining = Math.max(MIN_DURATION - elapsed, 0);
-    setTimeout(() => {
-      preloader.classList.add('hide');
-      document.body.classList.remove('preloading');
-      setTimeout(() => { preloader.remove(); }, 700);
-    }, remaining);
+    preloader.classList.add('hide');
+    document.body.classList.remove('preloading');
+    setTimeout(() => { preloader.remove(); }, 700);
   }
 
-  if(document.readyState === 'complete'){
-    hidePreloader();
-  } else {
-    window.addEventListener('load', hidePreloader);
-  }
+  // Показываем лого ровно DURATION мс и сразу скрываем прелоадер —
+  // не ждём полной загрузки всех ресурсов (картинок, карты, шрифтов),
+  // чтобы страница не "зависала" на прелоадере.
+  setTimeout(hidePreloader, DURATION);
 })();
 
 const toggle = document.getElementById('menuToggle');
